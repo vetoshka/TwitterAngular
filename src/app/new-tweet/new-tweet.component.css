@@ -1,0 +1,40 @@
+.icon{
+    background-color:rgb(221, 221, 221);
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+.divider{
+    background-color: rgb(240, 238, 238);
+    height: 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.tweet{
+    margin-left: 80px;
+}
+.newTweet{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+.tweet-input{
+    display: flex;
+   
+}
+input{
+    outline: none;
+    border: none;
+    font-size: 14px;
+}
+.make-tweet-btn{
+    width: 80px;
+    height: 40px;
+    align-self:flex-end;
+    background-color: cornflowerblue;
+    font-size: 14px;
+    border-radius: 30px;
+    color: cornsilk;
+    border:none;
+}
