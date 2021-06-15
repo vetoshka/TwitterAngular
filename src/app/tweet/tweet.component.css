@@ -1,0 +1,33 @@
+.icon{
+    background-color:rgb(221, 221, 221);
+    width: 70px;
+    height: 60px;
+    border-radius: 60px;
+    margin-right: 10px;
+}
+.tweet{
+    display: flex;
+    max-width: 400px;
+    margin-top: 40px;
+}
+.tweet-header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.profile-name{
+    margin-right: 10px;
+    font-weight: bold;
+}
+.date{
+    color: rgba(0, 0, 0, 0.5);
+}
+.tweet-context{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.tweet-information{
+    display: flex;
+}
+
