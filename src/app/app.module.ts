@@ -1,24 +1,23 @@
+import { HttpClient } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { NewTweetComponent } from './new-tweet/new-tweet.component';
-import { TweetComponent } from './tweet/tweet.component';
+import { HomeModule } from './Modules/home/home.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    NewTweetComponent,
-    TweetComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+}
