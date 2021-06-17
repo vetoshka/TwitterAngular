@@ -22,4 +22,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   providers:[HttpClient],
   exports:[HomeComponent],
 })
-export class HomeModule { }
+export class HomeModule { 
+  
+}

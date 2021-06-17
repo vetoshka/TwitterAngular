@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable , throwError } from 'rxjs';
 import { BaseHttpService } from '../core/base-http.service';
 import { Tweet } from '../models/tweet';
-import { map } from 'rxjs/operators';
+import { map, catchError} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +22,7 @@ export class TweetService extends BaseHttpService  {
       return usersList.map(function(tweet: Tweet): Tweet {
           return new Tweet(tweet.text);
         });
-  }));;
-  }
+  })
+    )
+  };
 }

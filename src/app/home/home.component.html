@@ -1,5 +1,6 @@
 <header class="home_header">
-    <h1> Home </h1>
+    <h1> {{title}} </h1>
 </header>
 <app-new-tweet></app-new-tweet>
-<app-tweet></app-tweet>
+<div>{{error}}</div>
+<app-tweet *ngFor="let tweet of tweets" [text]="tweet.text" ></app-tweet>
