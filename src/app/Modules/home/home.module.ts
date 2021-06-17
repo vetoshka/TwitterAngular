@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from 'src/app/home/home.component';
-import { HomeRoutingModule } from './home-routing.module';
-import { TweetComponent } from 'src/app/tweet/tweet.component';
-import { NewTweetComponent } from 'src/app/new-tweet/new-tweet.component';
 import { TweetModule } from '../tweet/tweet.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
@@ -15,7 +12,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule,
     TweetModule,
     HttpClientModule 
   ],
@@ -23,5 +19,4 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   exports:[HomeComponent],
 })
 export class HomeModule { 
-  
 }
