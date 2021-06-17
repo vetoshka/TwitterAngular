@@ -6,6 +6,7 @@ import { NewTweetComponent } from 'src/app/new-tweet/new-tweet.component';
 import { ProfileComponent } from 'src/app/profile/profile.component';
 
 const routes: Routes = [
+  {path:"", redirectTo: '/home', pathMatch:'full'},
   {path: 'home', component: HomeComponent },
   {path: 'profile', component: ProfileComponent },
   {path: 'tweet', component: NewTweetComponent }
