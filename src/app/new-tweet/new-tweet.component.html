@@ -1,9 +1,12 @@
-<div class="newTweet">
-    <div class="divider"></div>
-    <div class="tweet-input">
-        <div class="icon"></div>
-        <input  placeholder="What`s happening?"/>
-    </div>
-    <div class="divider tweet"></div>
-    <button class="make-tweet-btn">Tweet</button>
-</div>
+<mat-card class="newTweet">
+  <mat-card-content class="tweet-input">
+    <div class="icon"></div>
+    <form class="form">
+    <mat-form-field>
+      <mat-label>What`s happening?</mat-label>
+      <textarea  matInput></textarea>
+    </mat-form-field>
+      </form>
+  </mat-card-content>
+    <button mat-raised-button class="make-tweet-btn">Tweet</button>
+</mat-card>

@@ -4,38 +4,29 @@
     height: 70px;
     border-radius: 50%;
     margin-right: 10px;
+  background-image: url("https://smartland.com/blog/wp-content/uploads/2019/12/Cat-1.jpg");
+  background-position: 50%;
+  background-size: 150%;
 }
-.divider{
-    background-color: rgb(240, 238, 238);
-    height: 1px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.tweet{
-    margin-left: 80px;
-}
+
 .newTweet{
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
     max-width: 400px;
+  display: flex;
+  flex-direction: column;
 }
 .tweet-input{
     display: flex;
-   
-}
-input{
-    outline: none;
-    border: none;
-    font-size: 14px;
 }
 .make-tweet-btn{
-    width: 80px;
-    height: 40px;
-    align-self:flex-end;
+    align-self: flex-end;
     background-color: cornflowerblue;
-    font-size: 14px;
     border-radius: 30px;
     color: cornsilk;
-    border:none;
 }
+.form{
+  flex-grow: 1;
+}
+mat-form-field{
+  width: 100%;
+}
+
