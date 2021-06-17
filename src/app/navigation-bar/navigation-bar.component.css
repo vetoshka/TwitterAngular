@@ -1,0 +1,25 @@
+.nav-bar__container{
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+}
+.nav-bar{
+    display: flex;
+   width: 100%;
+}
+a{
+    margin: 10px 10px;
+}
+.nav-button{
+    border: none;
+    padding: 10px 25px;
+    background: none;
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 15px;
+}
+.nav-button:hover{
+    background-color: hsl(207, 77%, 86%);
+    color: #2196f3;
+
+}
