@@ -1,7 +1,7 @@
 .icon{
     background-color:rgb(221, 221, 221);
-    width: 70px;
-    height: 60px;
+    min-width: 65px;
+    height: 65px;
     border-radius: 50%;
     margin-right: 10px;
 }
@@ -12,7 +12,7 @@
 }
 .tweet-header{
     display: flex;
-    width: 100%;
+    width: 400px;
     justify-content: space-between;
 }
 .profile-name{

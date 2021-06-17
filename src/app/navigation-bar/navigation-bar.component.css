@@ -3,10 +3,6 @@
     flex-direction: column;
     margin-right: 50px;
 }
-.nav-bar{
-    display: flex;
-   width: 100%;
-}
 a{
     margin: 10px 10px;
 }
