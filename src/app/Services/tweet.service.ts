@@ -20,6 +20,7 @@ export class TweetService extends BaseHttpService  {
     
     return this.get<Tweet[]>(environment.getAllTweets).pipe(map((data:any)=>{
       let usersList = data;
+      console.log(data);
       return usersList.map(function(tweet: Tweet): Tweet {
           return new Tweet(tweet.text);
         });
