@@ -5,11 +5,12 @@ import { TweetModule } from '../tweet/tweet.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NewTweetModule } from '../new-tweet/new-tweet.module';
 import { HomeRoutingModule } from './home-routing.module';
+import { TweetService } from 'src/app/Services/tweet.service';
 
 
 @NgModule({
   declarations: [
-    HomeComponent,
+    HomeComponent
     
   ],
   imports: [

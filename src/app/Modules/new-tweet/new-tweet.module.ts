@@ -18,6 +18,7 @@ import { MatInputModule } from '@angular/material/input';
     MatInputModule,
     MatButtonModule,
     NewTweetRoutingModule
+    
   ],
   exports:[NewTweetComponent]
 })

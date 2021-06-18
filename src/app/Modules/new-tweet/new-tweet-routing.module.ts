@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { NewTweetComponent } from 'src/app/new-tweet/new-tweet.component';
 
 const routes: Routes = [
-  {path: '', component: NewTweetComponent },
+  {path: 'tweet', component: NewTweetComponent },
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes)],
