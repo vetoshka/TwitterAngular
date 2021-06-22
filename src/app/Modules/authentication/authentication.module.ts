@@ -6,7 +6,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatRippleModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-
+import { AuthService } from 'src/app/Services/auth.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -18,8 +19,10 @@ import { MatInputModule } from '@angular/material/input';
     MatInputModule,
     MatRippleModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  exports:[LogInComponent]
+  exports:[LogInComponent],
+  providers:[AuthService]
 })
 export class AuthenticationModule { }

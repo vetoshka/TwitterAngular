@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavMenuModule } from './Modules/nav-menu/nav-menu.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AuthenticationModule } from './Modules/authentication/authentication.module';
 
 @NgModule({
@@ -17,11 +18,11 @@ import { AuthenticationModule } from './Modules/authentication/authentication.mo
     AppRoutingModule,
     NavMenuModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     AuthenticationModule
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
-
 }

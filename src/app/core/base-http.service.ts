@@ -14,8 +14,11 @@ export class BaseHttpService {
     return this.http.get<T>(environment.apiUrl+url)
   }
 
-  post():any{
-
+  post(url: string,object:any):Observable<any> {
+    const headers = { 'content-type': 'application/json'} 
+    const body=JSON.stringify(object);
+    
+    return this.http.post(environment.apiUrl + url, body,{'headers':headers})
   }
 
   put(){
