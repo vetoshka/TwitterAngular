@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TweetComponent } from 'src/app/tweet/tweet.component';
+import { TweetComponent } from 'src/app/Components/tweet/tweet.component';
 
 
 
