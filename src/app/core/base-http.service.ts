@@ -10,8 +10,10 @@ import { environment } from 'src/environments/environment';
 export class BaseHttpService {
 
   constructor(public http: HttpClient) { }
-  get<T>(url: string):Observable<T>{
-    return this.http.get<T>(environment.apiUrl+url)
+  get<T>(url: string, token:string|null):Observable<T>{
+    const headers = { 'content-type': 'application/json',
+    "Authorization": "Bearer " + token } 
+    return this.http.get<T>(environment.apiUrl+url,{'headers':headers})
   }
 
   post(url: string,object:any):Observable<any> {

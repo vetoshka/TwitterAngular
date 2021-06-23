@@ -8,6 +8,11 @@ import { NavMenuModule } from './Modules/nav-menu/nav-menu.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AuthenticationModule } from './Modules/authentication/authentication.module';
+import { JwtHelperService, JwtModule } from '@auth0/angular-jwt';
+
+export function tokenGetter() {
+  return localStorage.getItem("token");
+}
 
 @NgModule({
   declarations: [
@@ -19,9 +24,16 @@ import { AuthenticationModule } from './Modules/authentication/authentication.mo
     NavMenuModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    AuthenticationModule
+    AuthenticationModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        whitelistedDomains: ["localhost:4200"],
+        blacklistedRoutes: []
+      }
+    })
   ],
-  providers: [HttpClient],
+  providers: [HttpClient, JwtHelperService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { 

@@ -17,8 +17,7 @@ export class TweetService extends BaseHttpService  {
 
   getTweets(): Observable<Tweet[]> {
     
-    
-    return this.get<Tweet[]>(environment.getAllTweets).pipe(map((data:any)=>{
+    return this.get<Tweet[]>(environment.getAllTweets,localStorage.getItem("token")).pipe(map((data:any)=>{
       let usersList = data;
       console.log(data);
       return usersList.map(function(tweet: Tweet): Tweet {
