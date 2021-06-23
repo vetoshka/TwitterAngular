@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { AuthService } from 'src/app/Services/auth.service';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthenticationRoutingModule } from './authentication-routing.module';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatRippleModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AuthenticationRoutingModule
   ],
   exports:[LogInComponent],
   providers:[AuthService]

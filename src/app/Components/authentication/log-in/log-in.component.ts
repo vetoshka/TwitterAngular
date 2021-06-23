@@ -8,8 +8,7 @@ import { AuthService } from 'src/app/Services/auth.service';
 @Component({
   selector: 'app-log-in',
   templateUrl: './log-in.component.html',
-  styleUrls: ['./log-in.component.css'],
-  providers: [ ]
+  styleUrls: ['./log-in.component.css']
 })
 export class LogInComponent implements OnInit {
   loginForm!: FormGroup;
@@ -29,12 +28,11 @@ export class LogInComponent implements OnInit {
     userName: this.getElements.username.value,
     password: this.getElements.password.value,
   };
-  console.log(loginRequest);
   this.authService.logIn(loginRequest)
       .subscribe(
         res => {
           localStorage.setItem("token", res.token);
-          this.router.navigate(['/home'])
+          this.router.navigate(['/account'])
       }
         );
 

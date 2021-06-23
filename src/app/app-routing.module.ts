@@ -3,11 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { LogInComponent } from './Components/authentication/log-in/log-in.component';
 
 const routes: Routes = [
-{path:"", redirectTo: '/logIn', pathMatch:'full'},
-{path:"logIn", component: LogInComponent},
-{path: "",loadChildren: () => import('./Modules/home/home.module').then(m => m.HomeModule) },
-{ path:"profile",loadChildren: () => import('src/app/Modules/profile/profile.module').then(m => m.ProfileModule)},
-{path: "tweet", loadChildren: () => import('src/app/Modules/new-tweet/new-tweet.module').then(m => m.NewTweetModule) }];
+{path:"", redirectTo: '/auth/login', pathMatch:'full'},
+{path:"auth", loadChildren: () => import('./Modules/authentication/authentication.module').then(m=>m.AuthenticationModule)},
+{path: "account",loadChildren: () => import('./Modules/nav-menu/nav-menu.module').then(m => m.NavMenuModule) }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

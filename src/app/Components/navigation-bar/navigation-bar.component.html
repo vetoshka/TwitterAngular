@@ -1,9 +1,8 @@
 
 <div class="nav-bar__container">
-<a routerLink="/home">
+<a [routerLink]="[{outlets: {'nav':'home'}}]">
     <button class="nav-button">Home </button> </a>
-<a routerLink="/profile">  
+<a [routerLink]="[{outlets: {'nav': 'profile'}}]">  
     <button class="nav-button">Profile </button> </a>
-<a routerLink="/tweet">
+<a [routerLink]="[{outlets: {'nav': 'tweet'}}]">
     <button class="nav-button">Tweet</button></a>
-
