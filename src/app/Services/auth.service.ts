@@ -18,6 +18,10 @@ export class AuthService extends BaseHttpService implements CanActivate {
    return this.post('api/Account/LogIn', loginRequest);
     
   }
+  logout(){
+    localStorage.removeItem("token");
+    this.router.navigate(["/auth/login"]);
+  }
   canActivate() {
     const token = localStorage.getItem("token");
     if (token && !this.jwtHelper.isTokenExpired(token)){

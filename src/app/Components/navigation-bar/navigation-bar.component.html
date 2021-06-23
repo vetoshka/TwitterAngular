@@ -6,3 +6,5 @@
     <button class="nav-button">Profile </button> </a>
 <a [routerLink]="[{outlets: {'nav': 'tweet'}}]">
     <button class="nav-button">Tweet</button></a>
+    <button class="nav-button" (click)="logOut()">Log Out</button>
+    </div>
