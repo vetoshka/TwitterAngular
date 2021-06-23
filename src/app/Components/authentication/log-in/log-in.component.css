@@ -6,3 +6,21 @@
 .register-btn{
     border-radius: 30px;
 }
+form{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px;
+    align-items:baseline;
+}
+.actions{
+    display: flex;
+    align-items: center;
+}
+button{
+    padding: 5px 10px;
+    margin: 10px 10px;
+}
+.logIn-btn{
+    padding-left: 20px;
+    padding-right: 20px;
+}

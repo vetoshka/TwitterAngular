@@ -3,9 +3,9 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { BaseHttpService } from '../core/base-http.service';
 import { LoginRequest } from '../models/login-request';
-import { Subject } from 'rxjs';
 import { CanActivate, Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
@@ -15,7 +15,7 @@ export class AuthService extends BaseHttpService implements CanActivate {
   }
   logIn(loginRequest:LoginRequest):Observable<any>{
 
-   return this.post('api/Account/LogIn', loginRequest);
+   return this.post(environment.login, loginRequest);
     
   }
   logout(){
