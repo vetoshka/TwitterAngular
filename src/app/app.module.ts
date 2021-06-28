@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AuthenticationModule } from './Modules/authentication/authentication.module';
 import { JwtHelperService, JwtModule } from '@auth0/angular-jwt';
+import { RegisterComponent } from './Components/authentication/register/register.component';
 
 export function tokenGetter() {
   return localStorage.getItem("token");

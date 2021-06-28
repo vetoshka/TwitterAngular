@@ -6,6 +6,7 @@ import { LoginRequest } from '../models/login-request';
 import { CanActivate, Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { environment } from 'src/environments/environment';
+import { RegisterRequest } from '../models/registerRequest';
 @Injectable({
   providedIn: 'root'
 })
@@ -17,6 +18,9 @@ export class AuthService extends BaseHttpService implements CanActivate {
 
    return this.post(environment.login, loginRequest);
     
+  }
+  register(registerRequest: RegisterRequest):Observable<any>{
+    return this.post(environment.register, registerRequest);
   }
   logout(){
     localStorage.removeItem("token");

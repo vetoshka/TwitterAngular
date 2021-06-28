@@ -9,10 +9,11 @@ import { MatInputModule } from '@angular/material/input';
 import { AuthService } from 'src/app/Services/auth.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthenticationRoutingModule } from './authentication-routing.module';
+import { RegisterComponent } from 'src/app/Components/authentication/register/register.component';
 
 
 @NgModule({
-  declarations: [LogInComponent],
+  declarations: [LogInComponent,RegisterComponent],
   imports: [
     CommonModule,
     MatFormFieldModule,
@@ -24,7 +25,7 @@ import { AuthenticationRoutingModule } from './authentication-routing.module';
     HttpClientModule,
     AuthenticationRoutingModule
   ],
-  exports:[LogInComponent],
+  exports:[LogInComponent , RegisterComponent],
   providers:[AuthService]
 })
 export class AuthenticationModule { }

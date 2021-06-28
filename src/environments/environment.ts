@@ -6,7 +6,8 @@ export const environment = {
   production: false,
   apiUrl: 'https://localhost:44301/',
   getAllTweets:'api/Tweet',
-  login:'api/Account/LogIn'
+  login:'api/Account/LogIn',
+  register:'api/Account/Register'
 };
 
 /*

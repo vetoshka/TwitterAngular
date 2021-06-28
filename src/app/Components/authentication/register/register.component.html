@@ -1,0 +1,22 @@
+<form [formGroup] = "registerForm">
+
+    <div class="header">Create your account</div>
+  
+    <mat-form-field>
+      <input matInput type="text" placeholder="User name" autocomplete="off" formControlName="username" required>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput type="email" placeholder="Email" autocomplete="off" formControlName="email" required>
+      </mat-form-field>
+    <mat-form-field>
+      <input matInput type="password" placeholder="Password" autocomplete="off" formControlName="password" required>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput type="password" placeholder="Confirm password" autocomplete="off" [ngClass]="{ 'is-invalid':  getElements.confirmPassword.errors }" formControlName="confirmPassword" required >
+     
+     </mat-form-field>
+    <div class="actions">
+        <button  mat-raised-button class="logIn-btn" color="primary" type="submit" [disabled]="!registerForm.valid" (click)="register()">Register</button>
+      </div>
+  
+</form>
